@@ -94,6 +94,9 @@ df['Mileage'] = df['Mileage'].replace('[,]', '', regex=True).astype(int)
 # Verify data types
 print(df.dtypes) </pre>
 
+# Verify data types
+print(df.dtypes) </pre>
+
 ### Results
 
 Summary of Key Insights from the Car Inventory Analysis Price Trends:
@@ -139,21 +142,6 @@ While the analysis provided key insights into car pricing and brand performance,
 
 [Car Dataset](https://docs.google.com/spreadsheets/d/148gzCAxQno4wlIj_tzgUIyDTG8y4ifRr/edit?usp=sharing&ouid=107969485968939728677&rtpof=true&sd=true)
 
-Clean Dataset
 
-<pre>
-# Check for missing values
-print(df.isnull().sum())
-
-# Remove duplicates if any
-df = df.drop_duplicates()
-
-# Remove unwanted characters from numeric columns and convert to numbers
-df['Price'] = df['Price'].replace('[\$,]', '', regex=True).astype(float)
-df['Cost'] = df['Cost'].replace('[\$,]', '', regex=True).astype(float)
-df['Mileage'] = df['Mileage'].replace('[,]', '', regex=True).astype(int)
-
-# Verify data types
-print(df.dtypes) </pre>
 
 
